@@ -1,24 +1,43 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { useEffect } from "react";
+import { lpBody } from "../lp-content";
 
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
 export const Route = createFileRoute("/")({
+  head: () => ({
+    meta: [
+      { title: "Tahiti Corretora | Seguro Auto sem burocracia" },
+      {
+        name: "description",
+        content:
+          "Seguro Auto com assistência 24 horas, coberturas sob medida e atendimento próximo da Tahiti Corretora de Seguros.",
+      },
+      { property: "og:title", content: "Tahiti Corretora | Seguro Auto" },
+      {
+        property: "og:description",
+        content:
+          "Proteja seu veículo com assistência 24 horas e atendimento próximo.",
+      },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+    ],
+  }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
 function Index() {
-  return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
-  );
+  useEffect(() => {
+    const header = document.getElementById("siteHeader");
+    const floatWa = document.getElementById("floatWa");
+    const stickyCta = document.querySelector(".sticky-cta");
+    const handleScroll = () => {
+      header?.classList.toggle("scrolled", window.scrollY > 40);
+      floatWa?.classList.toggle("visible", window.scrollY > 500);
+      stickyCta?.classList.toggle("visible", window.scrollY > 500);
+    };
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    handleScroll();
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  return <div dangerouslySetInnerHTML={{ __html: lpBody }} />;
 }
