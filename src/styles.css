@@ -94,7 +94,14 @@
   }
   .nav-inner{display:flex;align-items:center;justify-content:space-between;gap:24px;}
   .nav-logo{display:flex;align-items:center;gap:10px;}
-  .nav-logo img{height:56px;width:auto;}
+  .nav-logo img{
+    height:44px;width:auto;
+    background:#fff;
+    padding:6px 12px;
+    border-radius:8px;
+    box-shadow:0 6px 18px -8px rgba(0,0,0,0.35);
+  }
+
   .nav-logo-text{font-family:'Fraunces',serif;color:var(--paper);font-size:20px;letter-spacing:0.02em;line-height:1.1;}
   .nav-logo-text span{display:block;font-family:'Manrope',sans-serif;font-size:10px;letter-spacing:0.16em;color:var(--gold);font-weight:700;margin-top:3px;}
   .nav-links{display:flex;align-items:center;gap:30px;list-style:none;}
