@@ -396,9 +396,7 @@
   /* ---------- FOOTER ---------- */
   footer{background:var(--navy-deep);color:#8FA0BE;padding:50px 0 40px;}
   footer .wrap > *{position:relative;z-index:1;}
-  .footer-box{
-    background:linear-gradient(135deg, var(--navy) 0%, #123considered 0%);
-  }
+
   footer .wrap{
     background:linear-gradient(135deg, var(--blue) 0%, var(--navy) 60%, var(--navy-deep) 100%);
     border:1px solid rgba(231,198,135,0.22);
