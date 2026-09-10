@@ -66,17 +66,20 @@ function Index() {
           : r.top - parent.top + r.height / 2;
       };
 
+      const first = nums[0]!;
+      const third = nums[2]!;
+
       if (carH && window.getComputedStyle(carH).display !== "none") {
-        const p1 = getCenter(nums[0], true);
-        const p3 = getCenter(nums[2], true);
+        const p1 = getCenter(first, true);
+        const p3 = getCenter(third, true);
         const pos = p1 + (p3 - p1) * progress;
         // Center the 46px car on the point.
         carH.style.transform = `translateX(${pos - 23}px)`;
       }
 
       if (carV && window.getComputedStyle(carV).display !== "none") {
-        const p1 = getCenter(nums[0], false);
-        const p3 = getCenter(nums[2], false);
+        const p1 = getCenter(first, false);
+        const p3 = getCenter(third, false);
         const pos = p1 + (p3 - p1) * progress;
         carV.style.transform = `translateY(${pos - 23}px) rotate(90deg)`;
       }
