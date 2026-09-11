@@ -406,7 +406,7 @@
   }
   .footer-inner{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:24px;padding-bottom:26px;border-bottom:1px solid rgba(255,255,255,0.12);}
   .footer-logo{display:flex;align-items:center;gap:10px;}
-  .footer-logo img{width:260px;height:auto;max-width:100%;background:var(--paper);padding:10px 16px;border-radius:8px;}
+  .footer-logo img{width:140px;height:auto;max-width:100%;background:var(--paper);padding:8px 12px;border-radius:8px;}
   .footer-logo span{font-family:'Fraunces',serif;color:var(--paper);font-size:16px;}
   .footer-links{display:flex;gap:26px;font-size:14px;flex-wrap:wrap;color:#C8D3E5;}
   .footer-links a:hover{color:var(--gold-bright);}
