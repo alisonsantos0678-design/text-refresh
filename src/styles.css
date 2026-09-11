@@ -477,7 +477,7 @@
     header.scrolled{padding:10px 0;}
     .nav-inner{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:12px;}
     .nav-logo{min-width:0;}
-    .nav-logo img{width:82px;height:auto;padding:6px 8px;}
+    .nav-logo img{width:110px;height:auto;padding:5px 8px;}
     .nav-logo-text{display:none;}
     .hero{min-height:0;padding:118px 0 56px;}
     .hero-inner{padding-left:20px;padding-right:20px;}
