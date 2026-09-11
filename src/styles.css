@@ -95,9 +95,9 @@
   .nav-inner{display:flex;align-items:center;justify-content:space-between;gap:24px;}
   .nav-logo{display:flex;align-items:center;gap:10px;}
   .nav-logo img{
-    height:58px;width:auto;
+    height:68px;width:auto;
     background:#fff;
-    padding:6px 12px;
+    padding:7px 14px;
     border-radius:0;
     box-shadow:0 6px 18px -8px rgba(0,0,0,0.35);
   }
